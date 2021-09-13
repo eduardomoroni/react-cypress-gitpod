@@ -7,6 +7,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - run: yarn install
-      - run: yarn cypress:ci
+      - shell: bash
+        env:
+          SUPER_SECRET: ${{ secrets.CypressKey }}
+        run: |
+          npx cypress run --record --key "$CYPRESS_KEY"
       - name: Cypress run
         uses: cypress-io/github-action@v2.9.7
