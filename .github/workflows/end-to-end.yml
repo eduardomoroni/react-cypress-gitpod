@@ -3,14 +3,17 @@ on: [push]
 jobs:
   cypress-run:
     runs-on: ubuntu-20.04
+    container: cypress/included:8.3.1
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - run: yarn install
       - shell: bash
         env:
-          SUPER_SECRET: ${{ secrets.CypressKey }}
+          TEST: ${{ secrets.CypressKey }}
         run: |
           npx cypress run --record --key "$CYPRESS_KEY"
       - name: Cypress run
         uses: cypress-io/github-action@v2.9.7
+        with:
+          browser: chrome
