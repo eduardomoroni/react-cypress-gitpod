@@ -2,16 +2,20 @@ image:
   file: docker/gitpod.Dockerfile
 
 tasks:
+  - name: Open cypress
+    init: |
+      gp sync-await install
+      npx cypress install
+      npx cypress verify
+      npx cypress info
+    command: yarn cypress:open
+    openMode: tab-after
   - name: Install and run dev server
     init: |
       yarn --force
       gp sync-done install
     command: yarn start
     openMode: tab-before
-  - name: Open cypress
-    init: gp sync-await install
-    command: yarn cypress:open
-    openMode: tab-after
 ports:
   - port: 3000
     onOpen: open-preview
