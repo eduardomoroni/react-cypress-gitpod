@@ -6,13 +6,11 @@ tasks:
       touch /tmp/.npm-lock
       yarn
       rm /tmp/.npm-lock
-    command: yarn dev
+    command: yarn start
   - init: sleep 1 && while [ -f /tmp/.npm-lock ]; do sleep 1; done
     command: yarn cypress:open
 ports:
-  - port: 5900
-    onOpen: ignore
+  - port: 3000
+    onOpen: open-preview
   - port: 6080
     onOpen: open-browser
-  - port: 10000
-    onOpen: ignore
