@@ -10,9 +10,9 @@ jobs:
       - run: yarn install
       - shell: bash
         env:
-          TEST: ${{ secrets.CypressKey }}
+          TEST: ${{ secrets.CypressRecordKey }}
         run: |
-          npx cypress run --record --key "$CYPRESS_KEY"
+          npx cypress run --record
       - name: Cypress run
         uses: cypress-io/github-action@v2.9.7
         with:
