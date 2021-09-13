@@ -72,4 +72,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 # Gitpod instructions
+
 [![Open in gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/eduardomoroni/react-cypress-gitpod)
+Start gitpod workspace and then click on the left side bar, under the 'Remote Explorer Item'.
+Port 3000 is the dev server
+Port 6080 is the cypress (actualy it's VNC viewer pointing to cypress server)
+All the other ports are irrelevant
