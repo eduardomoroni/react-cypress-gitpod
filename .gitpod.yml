@@ -3,12 +3,11 @@ image:
 
 tasks:
   - name: Open cypress
-    init: |
+    command: |
       gp sync-await install
-      npx cypress install
+      npx cypress install --force
       npx cypress verify
-      npx cypress info
-    command: yarn cypress:open
+      npx cypress infoyarn cypress:open
     openMode: tab-after
   - name: Install and run dev server
     init: |
