@@ -2,15 +2,19 @@ image:
   file: docker/gitpod.Dockerfile
 
 tasks:
-  - init: |
-      touch /tmp/.npm-lock
-      yarn
-      rm /tmp/.npm-lock
+  - name: Install and run dev server
+    init: |
+      yarn --force
+      gp sync-done install
     command: yarn start
-  - init: sleep 1 && while [ -f /tmp/.npm-lock ]; do sleep 1; done
+  - name: Open cypress
+    init: gp sync-await install
     command: yarn cypress:open
+    openMode: tab-after
 ports:
   - port: 3000
     onOpen: open-preview
+  - port: 5900
+    onOpen: ignore
   - port: 6080
     onOpen: open-browser
