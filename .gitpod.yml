@@ -7,6 +7,7 @@ tasks:
       yarn --force
       gp sync-done install
     command: yarn start
+    openMode: tab-before
   - name: Open cypress
     init: gp sync-await install
     command: yarn cypress:open
