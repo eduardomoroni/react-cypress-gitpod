@@ -7,7 +7,8 @@ tasks:
       gp sync-await install
       npx cypress install --force
       npx cypress verify
-      npx cypress infoyarn cypress:open
+      npx cypress info
+      yarn cypress:open
     openMode: tab-after
   - name: Install and run dev server
     init: |
