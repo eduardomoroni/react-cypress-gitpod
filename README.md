@@ -1,3 +1,4 @@
+![End to end tests](https://github.com/eduardomoroni/react-cypress-gitpod/actions/workflows/end-to-end.yml/badge.svg)
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/eduardomoroni/react-cypress-gitpod)
 
 # Getting Started with Create React App
