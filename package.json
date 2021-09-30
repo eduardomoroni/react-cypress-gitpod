@@ -19,6 +19,7 @@
     "eject": "react-scripts eject",
     "prettify": "prettier --write .",
     "prettier": "prettier --check .",
+    "lint": "eslint src --ext .js,.jsx",
     "cypress:open": "cypress open",
     "cypress:ci": "cypress run --record"
   },
