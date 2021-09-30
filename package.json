@@ -17,6 +17,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "prettify": "prettier --write .",
+    "prettier": "prettier --check .",
     "cypress:open": "cypress open",
     "cypress:ci": "cypress run --record"
   },
